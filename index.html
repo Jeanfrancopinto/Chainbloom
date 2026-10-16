@@ -1,0 +1,65 @@
+<!doctype html>
+<!-- Chainbloom (MIT). Font: Fredoka, SIL Open Font License 1.1 (licenses/Fredoka-OFL.txt). -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#060818" />
+    <meta name="color-scheme" content="dark" />
+    <!-- Optional: the link added to share cards. Leave empty on GitHub Pages; on itch.io put your game page here. -->
+    <meta name="chainbloom-share-url" content="" />
+    <meta name="description" content="Chainbloom: a one-tap firefly chain-reaction roguelite. One spark a night. A new daily run for everyone, every day." />
+    <meta property="og:title" content="Chainbloom" />
+    <meta property="og:description" content="One tap. One night. How long can your chain glow?" />
+    <meta property="og:type" content="website" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Chainbloom</title>
+    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <script type="module" crossorigin src="./assets/index-Is5Dq6Js.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DDGvs21A.css">
+  </head>
+  <body>
+    <canvas id="game" aria-label="Chainbloom meadow. Click or tap to release your spark."></canvas>
+
+    <div id="hud" class="hud hidden" aria-live="off">
+      <div class="hud-top">
+        <div class="hud-left">
+          <div id="hud-night" class="hud-night">Night 1</div>
+          <div id="hud-lanterns" class="lanterns" role="img"></div>
+        </div>
+        <div class="hud-center">
+          <div id="hud-score" class="hud-score">0</div>
+          <div id="hud-live" class="hud-label">glow</div>
+        </div>
+        <div class="hud-right">
+          <button id="btn-mute" class="icon-btn" type="button" aria-label="Mute (M)"></button>
+          <button id="btn-pause" class="icon-btn" type="button" aria-label="Pause (Esc)">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="hud-quota">
+        <div class="quota">
+          <div class="quota-bar"><div id="quota-fill"></div><div id="quota-mark"></div></div>
+          <div id="quota-text" class="quota-text">0 / 0</div>
+        </div>
+        <div id="hud-taps" class="taps" role="img"></div>
+      </div>
+      <div class="hud-bottom">
+        <div id="hud-charms" class="charms-row"></div>
+        <button id="btn-finish" class="btn btn-small hidden" type="button">End night</button>
+      </div>
+      <div id="hud-hint" class="hud-hint hidden"></div>
+      <div id="banner" class="banner" aria-live="polite"></div>
+    </div>
+
+    <div id="screens"></div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="fps" class="fps hidden"></div>
+    <noscript><p style="color:#fff;font-family:sans-serif;padding:2em">Chainbloom needs JavaScript turned on.</p></noscript>
+  </body>
+</html>
